@@ -1,0 +1,16 @@
+.carusel{
+   overflow:auto;
+   width: 100%;
+   overflow: scroll;
+   padding: 30px;
+   position: relative; /*todos los hijos seran relativos*/
+}
+.carusel__contenedor{
+   white-space: nowrap;
+   margin:70px 0px;
+   padding-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+   display: none;
+ }

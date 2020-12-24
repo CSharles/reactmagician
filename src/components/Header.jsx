@@ -1,13 +1,15 @@
 import React from 'react';
 
-import '../assets/styles/Header.scss';
+import '../assets/styles/components/Header.scss';
+import logo from '../assets/static/logo-platzi-video-BW2.png';
+import userIcon from '../assets/static/user-icon.png';
 
 const Header = () => (
   <header className='header'>
-    <img className='header__img' src='./logo-platzi-video-BW2.png' alt='logo de la app' />
+    <img className='header__img' src={logo} alt='logo de la app' />
     <div className='header__menu'>
       <div className='header__menu--profile'>
-        <img src='./user-icon.png' alt='imagen del usuario' />
+        <img src={userIcon} alt='imagen del usuario' />
         <p>Perfil</p>
       </div>
       <ul>

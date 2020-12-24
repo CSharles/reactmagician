@@ -1,7 +1,9 @@
+@import './Vars.scss';
+@import './Media.scss';
 body{
    margin: 0px; /*esto es para quitar el margen de la pagina */
-   background-color: #8F57FD;
-   font-family: 'Muli', sans-serif;
+   background-color: $main-color;
+   font-family: $theme-font;
 }
 *{
    box-sizing: border-box;
