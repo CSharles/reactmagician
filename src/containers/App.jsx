@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Search from '../components/Search';
@@ -21,19 +22,19 @@ const App = () => {
     <div className='App'>
       <Header />
       <Search />
-      <Categories title='Mi lista'>
-        <Carusel>
-          <CaruselItem />
-          <CaruselItem />
-          <CaruselItem />
-          <CaruselItem />
-        </Carusel>
-      </Categories>
+      {videos.mylist?.length > 0 && (
+        <Categories title='Mi lista'>
+          <Carusel>
+            <CaruselItem />
+
+          </Carusel>
+        </Categories>
+      )}
 
       <Categories title='Tendencias'>
         <Carusel>
-          <CaruselItem />
-          <CaruselItem />
+          {videos.trends?.map((item) => <CaruselItem key={item.id} {...item} />)}
+
         </Carusel>
       </Categories>
 
